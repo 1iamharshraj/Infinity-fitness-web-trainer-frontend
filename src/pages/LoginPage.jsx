@@ -1,10 +1,8 @@
 import { useState, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
-// import silkVideo from '../assets/silk-1771163150621.webm'; // WebM not supported on iOS
+import silkVideo from '../assets/silk-1771163150621.mp4';
 
-// Remote URL for better device support (MP4)
-const REMOTE_VIDEO_URL = 'https://assets.mixkit.co/videos/preview/mixkit-red-ink-swirling-in-the-water-2104-large.mp4';
 const POSTER_URL = 'https://images.unsplash.com/photo-1535868463750-c78d9c43e14d?q=80&w=2836&auto=format&fit=crop';
 
 function LoginPage() {
@@ -50,7 +48,7 @@ function LoginPage() {
           poster={POSTER_URL}
           className="w-full h-full object-cover opacity-60"
         >
-          <source src={REMOTE_VIDEO_URL} type="video/mp4" />
+          <source src={silkVideo} type="video/mp4" />
         </video>
       </div>
 
